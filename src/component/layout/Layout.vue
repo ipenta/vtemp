@@ -1,12 +1,26 @@
 <template lang="html">
-  <div class="app-content">
-      <h1>layout</h1>
-      <router-view></router-view>
-  </div>
+<div class="main">
+    <Sidebar></Sidebar>
+    <div class="content">
+        <Navbar></Navbar>
+        <Content></Content>
+    </div>
+</div>
 </template>
 
 <script>
-export default {}
+import {
+    Navbar,
+    Sidebar,
+    Content
+} from '@/component/layout/component'
+export default {
+    components: {
+        Navbar,
+        Sidebar,
+        Content
+    }
+}
 </script>
 
 <style lang="css">
