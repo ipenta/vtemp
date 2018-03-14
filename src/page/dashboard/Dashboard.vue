@@ -1,5 +1,5 @@
 <template lang="html">
-
+  <h2>bashboard</h2>
 </template>
 
 <script>
