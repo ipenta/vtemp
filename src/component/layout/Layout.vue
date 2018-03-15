@@ -1,7 +1,7 @@
 <template lang="html">
-<div class="main">
-    <Sidebar></Sidebar>
-    <div class="content">
+<div class="app-wrapper">
+    <Sidebar class="sidebar-container"></Sidebar>
+    <div class="main-container">
         <Navbar></Navbar>
         <Content></Content>
     </div>
@@ -23,5 +23,15 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style rel="stylesheet/scss" lang="scss" scoped>
+@import "src/style/mixin.scss";
+.app-wrapper {
+    @include clearfix;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 </style>

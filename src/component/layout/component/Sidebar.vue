@@ -1,11 +1,12 @@
 <template lang="html">
-  <h2>Sidebar</h2>
+<el-menu mode="vertical">
+<el-menu-item index="1">
+    <i class="el-icon-setting"></i>
+    <span slot="title">导航四</span>
+</el-menu-item>
+</el-menu>
 </template>
 
 <script>
-export default {
-}
+export default {}
 </script>
-
-<style lang="css">
-</style>
