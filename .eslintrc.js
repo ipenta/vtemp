@@ -27,6 +27,19 @@ module.exports = {
         }],
         'space-before-function-paren': 'off',
         'generator-star-spacing': 'off',
+        "keyword-spacing": [2, {
+            "overrides": {
+                "if": {
+                    "after": true
+                },
+                "for": {
+                    "after": false
+                },
+                "while": {
+                    "after": false
+                }
+            }
+        }],
         // allow debugger during development
         'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
     }

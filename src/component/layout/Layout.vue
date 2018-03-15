@@ -1,5 +1,5 @@
 <template lang="html">
-<div class="app-wrapper">
+<div class="app-wrapper" :class="{hideSidebar:!sidebar.opened}">
     <Sidebar class="sidebar-container"></Sidebar>
     <div class="main-container">
         <Navbar></Navbar>
@@ -15,10 +15,16 @@ import {
     Content
 } from '@/component/layout/component'
 export default {
+    name: 'layout',
     components: {
         Navbar,
         Sidebar,
         Content
+    },
+    computed: {
+        sidebar() {
+            return this.$store.state.app.sidebar
+        }
     }
 }
 </script>

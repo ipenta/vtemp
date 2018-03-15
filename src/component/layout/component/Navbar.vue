@@ -1,11 +1,14 @@
 <template lang="html">
 <el-menu mode="horizontal" class="navbar">
-<hamburger class="hamburger-container" :toggleClick="toggleSideBar"></hamburger>
+<hamburger class="hamburger-container" :toggleClick="toggleSideBar" :isActive="sidebar.opened"></hamburger>
 <breadcrumb></breadcrumb>
 </el-menu>
 </template>
 
 <script>
+import {
+    mapGetters
+} from 'vuex'
 import Hamburger from '@/component/Hamburger'
 import Breadcrumb from '@/component/Breadcrumb'
 export default {
@@ -13,8 +16,13 @@ export default {
         Hamburger,
         Breadcrumb
     },
+    computed: { ...mapGetters(['sidebar', 'user'])
+    },
     methods: {
-        toggleSideBar() {}
+        toggleSideBar() {
+            console.log(this.$store.app.state)
+            this.$store.dispatch('toggleSideBar')
+        }
     }
 }
 </script>
